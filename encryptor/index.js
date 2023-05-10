@@ -21,3 +21,20 @@ else {
          
   return result;
 }// encrypt
+
+function decrypt(text) {
+  let result = '';
+
+for (let i=0; i < text.length; i++) {
+    let letter = text[i];    
+    let letterIndex = encrypt_key.indexOf(letter);
+         
+ if (letterIndex < 0) {
+   result+= letter;     
+ }
+         
+else {
+  result += letter[letterIndex];
+  }
+ }
+         
