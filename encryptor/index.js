@@ -20,4 +20,4 @@ else {
  }
          
   return result;
-}//
+}// encrypt
