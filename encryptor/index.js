@@ -48,7 +48,7 @@ function decrypt(text) {
 
 // add event listener to the form
 const encryptForm = document.getElementById('encrypt-form');
-encryptForm.addeventlistener('submit', Function(e) {
+encryptForm.addeventlistener('submit', function(e) {
   e.preventDefault();
 
   // get the value of the content
