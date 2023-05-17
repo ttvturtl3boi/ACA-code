@@ -1,9 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="veiwport" content="width=device-width">
-    <title>Encryptor</title>
-    <link herf="styles.css" rel="stylesheet" type="text/css">
-  </head>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Encryptor</title>
+  <link href="styles.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="container">
+    <h1>The Encryptor</h1>
+    
+    <form id="encrypt-form">
+      <label for="encrypt">Encrypt a message</label>
+      <textarea id="encrypt" name="encrypt"></textarea>
+      
+      <input type="submit" value="Encrypt">
+      
+      <p class="message" id="encoded-message"></p>
+    </form>
+    
+    <form id="decrypt-form">
+      <label for="decrypt">Decrypt a message</label>
+      <textarea id="decrypt" name="decrypt"></textarea>
+      
+      <input type="submit" value="Decrypt">
+      
+      <p class="message" id="decrypted-message"></p>
+    </form>
+  </div>
+ 
+  <script src="index.js"></script>
+</body>
+</html>
