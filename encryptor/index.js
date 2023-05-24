@@ -63,3 +63,20 @@ let encrypted = encrypt(message);
   encodedMessageElement.innerText = encrypted;
 });
 
+const decryptForm = document.getElementById('encrypt-form');
+encryptForm.addeventlistener('submit', function(e) {
+  e.preventDefault();
+
+  // get the value of the content
+  let messageElement = document.getElementById('encrypt');
+  let message = messageElement.value;
+
+// encrypt the content
+let encrypted = encrypt(message);  
+
+  // display encrypted message 
+  let encodedMessageElement = document.getElementById('encoded-message');
+  encodedMessageElement.innerText = encrypted;
+});
+
+
