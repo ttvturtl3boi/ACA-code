@@ -48,35 +48,37 @@ function decrypt(text) {
 
 // add event listener to the form
 const encryptForm = document.getElementById('encrypt-form');
-encryptForm.addeventlistener('submit', function(e) {
+encryptForm.addEventListener('submit', function(e) {
   e.preventDefault();
-
+  
   // get the value of the content
   let messageElement = document.getElementById('encrypt');
   let message = messageElement.value;
-
-// encrypt the content
-let encrypted = encrypt(message);  
-
-  // display encrypted message 
+  
+  // encrypt the content
+  let encrypted = encrypt(message);
+  
+  // display encrypted message in p element
   let encodedMessageElement = document.getElementById('encoded-message');
   encodedMessageElement.innerText = encrypted;
 });
 
-const decryptForm = document.getElementById('encrypt-form');
-encryptForm.addeventlistener('submit', function(e) {
+
+// add event listener to the decrypt form
+const decryptForm = document.getElementById('decrypt-form');
+decryptForm.addEventListener('submit', function(e) {
   e.preventDefault();
-
+  
   // get the value of the content
-  let messageElement = document.getElementById('encrypt');
+  let messageElement = document.getElementById('decrypt');
   let message = messageElement.value;
-
-// encrypt the content
-let encrypted = encrypt(message);  
-
-  // display encrypted message 
-  let encodedMessageElement = document.getElementById('encoded-message');
-  encodedMessageElement.innerText = encrypted;
+  
+  // decrypt the content
+  let decrypted = decrypt(message);
+  
+  // display encrypted message in p element
+  let decodedMessageElement = document.getElementById('decoded-message');
+  decodedMessageElement.innerText = decrypted;
 });
 
 
